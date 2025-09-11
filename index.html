@@ -14,9 +14,19 @@
     <header class="relative z-40 bg-white">
         <input id="nav-toggle" type="checkbox" class="peer hidden" />
 
-        <div class="mx-auto max-w-screen-md px-4 py-4">
-            <div class="flex items-center justify-between">
-                <a href="#" class="flex items-center gap-2">
+        <div class="mx-auto max-w-full
+                    px-4
+                    md:px-8
+                    lg:px-8
+                    xl:px-8
+                    py-4
+                    max-w-screen-md
+                    md:max-w-[864px]
+                    lg:max-w-[1140px]
+                    xl:max-w-[1440px]
+                    ">
+            <div class="flex items-center gap-6 relative">
+                <a href="#" class="flex items-center gap-2 shrink-0">
                     <img src="assets/imgs/Frame8.png" class="h-6 w-6 rounded-full object-cover" />
                     <span class="text-base font-semibold leading-none">It’s me</span>
                 </a>
@@ -27,46 +37,27 @@
                     <a href="#contact" class="hover:text-pink-500">contact</a>
                 </nav>
 
-                <div class="hidden md:block ml-auto"></div>
+                 <div class="ml-auto flex items-center gap-5">
 
-                <label for="nav-toggle" class="inline-flex h-9 w-9 items-center justify-center " aria-label="Open menu">
-                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                        <path d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </label>
-            </div>
-        </div>
-        
-        <a href="#" class="absolute right-1 top-4 z-10 -translate-x-1/2 rounded-full border border-pink-400 px-5 py-2
-                    text-sm font-light leading-none text-gray-900 hover:bg-pink-50">
-            Download CV
-        </a>
-
-        <div class="pointer-events-none fixed inset-0 z-50 hidden bg-white peer-checked:block peer-checked:pointer-events-auto
-                    bg-[url('assets/imgs/Group5795.png')] bg-no-repeat bg-bottom bg-contain">
-            <div class="flex h-full flex-col">
-                <div class="px-6 pt-8 flex justify-center">
-                    <a href="index.html" class="flex items-center gap-3 md:mr-auto">
-                        <img src="assets/imgs/Frame8.png" alt="avatar" class="h-10 w-10 rounded-full object-cover" />
-                        <span class="text-normal font-semibold">It’s me</span>
-                    </a>
-                </div>
-
-                <nav class="mt-14 flex flex-1 flex-col items-center gap-10 px-12 text-l font-light">
-                    <a href="index.html" class="hover:text-pink-500">home</a>
-                    <a href="#about" class="hover:text-pink-500">about</a>
-                    <a href="#contact" class="hover:text-pink-500">contact</a>
-                </nav>
-
-                <div class="px-6 pb-10">
+                    <label for="nav-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center " aria-label="Open menu">
+                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                            <path d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </label>
+                    <div class="hidden lg:flex items-center gap-4 lg:order-none">
+                        <a href="#" aria-label="GitHub"><img src="assets/imgs/github.png" class="h-5 w-5" alt="GitHub" /></a>
+                        <a href="#" aria-label="Instagram"><img src="assets/imgs/instagram.png" class="h-5 w-5" alt="Instagram" /></a>
+                        <a href="#" aria-label="TikTok"><img src="assets/imgs/tiktok.png" class="h-5 w-5" alt="TikTok" /></a>
+                        <a href="#" aria-label="YouTube"><img src="assets/imgs/youtube.png" class="h-5 w-5" alt="YouTube" /></a>
+                    </div>
                     <a href="#"
-                        class="mx-auto block max-w-sm rounded-full bg-pink-500 px-10 py-4 text-center text-white shadow-lg hover:bg-pink-600">
+                        class="absolute left-1/2 rounded-full border border-pink-400 px-5 py-2
+                                text-sm font-light leading-none text-gray-900 hover:bg-pink-50
+                                md:static md:translate-x-0 lg:order-last">
                         Download CV
                     </a>
                 </div>
-            </div>
-
-            <label for="nav-toggle" class="absolute inset-0 -z-10 cursor-default" aria-label="Close menu"></label>
+             </div>
         </div>
     </header>
     <!--header-end-->
@@ -441,10 +432,11 @@
         </div>
     </section>
     <!--footer-start-->
-    <footer class="mt-10 bg-white">
+    <footer class="mt-2 bg-white">
         <div class="mx-auto max-w-screen-md px-4 py-16 text-center">
             <p class="text-xl font-light tracking-tight">
-                So, what are you <br>waiting for?
+                <span class="block md:hidden">So, what are you <br>waiting for?</span>
+                <span class="hidden md:inline">What are you waiting for?</span>
             </p>
 
             <a href="#" class="mt-6 inline-block rounded-full bg-pink-500 px-7 py-3
