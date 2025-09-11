@@ -14,51 +14,50 @@
     <header class="relative z-40 bg-white">
         <input id="nav-toggle" type="checkbox" class="peer hidden" />
 
-        <div class="mx-auto max-w-screen-md px-4 py-4">
-            <div class="flex items-center justify-between">
-                <a href="#" class="flex items-center gap-2">
+        <div class="mx-auto max-w-full
+                    px-4
+                    md:px-8
+                    lg:px-8
+                    xl:px-8
+                    py-4
+                    max-w-screen-md
+                    md:max-w-[864px]
+                    lg:max-w-[1140px]
+                    xl:max-w-[1440px]
+                    ">
+            <div class="flex items-center gap-6 relative">
+                <a href="#" class="flex items-center gap-2 shrink-0">
                     <img src="assets/imgs/Frame8.png" class="h-6 w-6 rounded-full object-cover" />
                     <span class="text-base font-semibold leading-none">It’s me</span>
                 </a>
 
-                <label for="nav-toggle" class="inline-flex h-9 w-9 items-center justify-center " aria-label="Open menu">
-                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                        <path d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </label>
-            </div>
-        </div>
-
-        <a href="#" class="absolute right-1 top-4 z-10 -translate-x-1/2 rounded-full border border-pink-400 px-5 py-2
-                    text-sm font-light leading-none text-gray-900 hover:bg-pink-50">
-            Download CV
-        </a>
-
-        <div class="pointer-events-none fixed inset-0 z-50 hidden bg-white peer-checked:block peer-checked:pointer-events-auto
-                    bg-[url('assets/imgs/Group5795.png')] bg-no-repeat bg-bottom bg-contain">
-            <div class="flex h-full flex-col">
-                <div class="px-6 pt-8 flex justify-center">
-                    <a href="index.html" class="flex items-center gap-3">
-                        <img src="assets/imgs/Frame8.png" alt="avatar" class="h-10 w-10 rounded-full object-cover" />
-                        <span class="text-normal font-semibold">It’s me</span>
-                    </a>
-                </div>
-
-                <nav class="mt-14 flex flex-1 flex-col items-center gap-10 px-12 text-l font-light">
+                <nav class="hidden md:flex items-center gap-8 text-sm font-light">
                     <a href="index.html" class="hover:text-pink-500">home</a>
                     <a href="#about" class="hover:text-pink-500">about</a>
                     <a href="#contact" class="hover:text-pink-500">contact</a>
                 </nav>
 
-                <div class="px-6 pb-10">
+                 <div class="ml-auto flex items-center gap-5">
+
+                    <label for="nav-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center " aria-label="Open menu">
+                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                            <path d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </label>
+                    <div class="hidden lg:flex items-center gap-4 lg:order-none">
+                        <a href="#" aria-label="GitHub"><img src="assets/imgs/github.png" class="h-5 w-5" alt="GitHub" /></a>
+                        <a href="#" aria-label="Instagram"><img src="assets/imgs/instagram.png" class="h-5 w-5" alt="Instagram" /></a>
+                        <a href="#" aria-label="TikTok"><img src="assets/imgs/tiktok.png" class="h-5 w-5" alt="TikTok" /></a>
+                        <a href="#" aria-label="YouTube"><img src="assets/imgs/youtube.png" class="h-5 w-5" alt="YouTube" /></a>
+                    </div>
                     <a href="#"
-                        class="mx-auto block max-w-sm rounded-full bg-pink-500 px-10 py-4 text-center text-white shadow-lg hover:bg-pink-600">
+                        class="absolute left-1/2 rounded-full border border-pink-400 px-5 py-2
+                                text-sm font-light leading-none text-gray-900 hover:bg-pink-50
+                                md:static md:translate-x-0 lg:order-last">
                         Download CV
                     </a>
                 </div>
-            </div>
-
-            <label for="nav-toggle" class="absolute inset-0 -z-10 cursor-default" aria-label="Close menu"></label>
+             </div>
         </div>
     </header>
     <!--header-end-->
@@ -67,8 +66,8 @@
     <section class="p-6">
         <div class="">
 
-            <div class="height-[32rem] container flex flex-col align-center gap-6 sm:gap-8 sm:flex-row sm:items-center">
-                <div class="flex flex-row">
+            <div class="height-[32rem] container flex flex-col align-center gap-6 sm:gap-8 xl:flex-row xl:items-center ">
+                <div class="flex flex-row xl:w-3/4">
                     <h1 class="text-4xl color-[var(--secondary-color)] flex-row md:text-6xl lg:text-6xl">
                         Let’s learn <img src="./assets/imgs/Subttasks_light.png"
                             class="w-8 h-6 md:w-12 md:h-10 inline-block"><br>
@@ -76,11 +75,10 @@
                             class="w-8 h-6 md:w-12 md:h-10 inline-block"><br>
                         an application
                     </h1>
-
                 </div>
 
                 <div class="absolute top-1/2 transform -translate-y-1/2 
-             right-[-1rem] sm:right-[-8em] md:right-[-10rem] lg:right-0">
+             right-4 bottom-1">
                     <div class="
                                 before:content-[''] 
                                 before:absolute 
@@ -153,20 +151,19 @@
                     </div>
 
                 </div>
-
-                <div class="flex flex-col gap-4 sm:w-1/2 ">
-                    <p class="text-sm text-gray-700 gap-4 sm:pt-0">
+                <div class="flex flex-col gap-4 sm:w-1/2 justify-end md:w-full xl:w-1/4">
+                    <p class="text-sm text-gray-700 gap-4 sm:pt-0 md:w-80">
                         with me <span class="text-[var(--main-color)]">arif iskandar</span>, a software
                         developer who
                         loves to share how to code in many programming languages and multi platforms.
                     </p>
-                    <span class="flex sm:flex-row gap-4 mt-6 md:justify-between">
+                    <span class="flex sm:flex-row gap-4 mt-6 md:justify-between md:h-10">
                         <div>
                             <button class="bg-[var(--main-color)] text-white px-6 py-2 rounded-xl transition">
                                 Start learn
                             </button>
                         </div>
-                        <div class="flex gap-4 align-center mt-2 sm:flex-row md:flex-col ">
+                        <div class="flex gap-4 align-center mt-2 sm:flex-row md:flex-col-reverse xl:hidden ">
                             <img src="./assets/imgs/github.png" class="w-6 h-6" />
                             <img src="./assets/imgs/instagram.png" class="w-6 h-6" />
                             <img src="./assets/imgs/tiktok.png" class="w-6 h-6" />
@@ -181,14 +178,40 @@
 
         <span class="max-w-7xl mx-auto px-6 py-16">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 pt-10">
+
+                <div
+                    class="bg-white border border-dashed border-gray-200 rounded-2xl shadow-sm overflow-hidden rounded-2xl p-2">
+                    <div class="relative">
+                        <img src="./assets/imgs/image0.png" alt="BWalet" class="w-full h-48 object-cover rounded-2xl">
+                        <div class="absolute top-2 right-2 flex gap-2">
+                            <img src="./assets/imgs/Tools-3.png" class="w-6 h-6">
+                            <img src="./assets/imgs/Tools-4.png" class="w-6 h-6">
+                        </div>
+                    </div>
+                    <div class="p-4 flex justify-between">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">BWalet</h3>
+                            <p class="text-sm text-gray-500">Business wallet</p>
+                        </div>
+                        <div class="flex items-center justify-end mt-2">
+                            <div class="flex -space-x-2  sm-block">
+                                <img src="./assets/imgs/person1.png" class="w-6 h-6 rounded-full border-white">
+                                <img src="./assets/imgs/person2.png" class="w-6 h-6 rounded-full border-white">
+                                <img src="./assets/imgs/person3.png" class="w-6 h-6 rounded-full border-white">
+                                <span
+                                    class="ml-2 text-xs rounded-full bg-gray-600 text-white flex items-center justify-center p-2">+99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="bg-white border border-dashed border-gray-200 rounded-2xl p-2">
                     <div class="relative">
                         <img src="./assets/imgs/image3.png" alt="Bookies" class="w-full h-48 object-cover rounded-2xl ">
                         <div class="absolute top-2 right-2 flex gap-2">
-                            <img src="icon1.png" class="w-6 h-6">
-                            <img src="icon2.png" class="w-6 h-6">
+                            <img src="./assets/imgs/Tools.png" class="w-6 h-6">
+                            <img src="./assets/imgs/Tools-2.png" class="w-6 h-6">
                         </div>
                     </div>
                     <div class="p-4 flex justify-between">
@@ -198,49 +221,49 @@
                         </div>
                         <div class="flex items-center justify-end mt-2">
                             <div class="flex -space-x-2  sm-block">
-                                <img src="./assets/imgs/person1.png" class="w-6 h-6 rounded-full border-2 border-white">
-                                <img src="./assets/imgs/person2.png" class="w-6 h-6 rounded-full border-2 border-white">
-                                <img src="./assets/imgs/person3.png" class="w-6 h-6 rounded-full border-2 border-white">
+                                <img src="./assets/imgs/person1.png" class="w-6 h-6 rounded-full border-white">
+                                <img src="./assets/imgs/person2.png" class="w-6 h-6 rounded-full border-white">
+                                <img src="./assets/imgs/person3.png" class="w-6 h-6 rounded-full border-white">
+                                <span
+                                    class="ml-2 text-xs rounded-full bg-gray-600 text-white flex items-center justify-center p-2">+99</span>
                             </div>
-                            <span
-                                class="ml-2 text-xs rounded-full bg-gray-600 text-white flex items-center justify-center p-2">+99</span>
                         </div>
                     </div>
                 </div>
 
                 <div
-                    class="bg-white border border-dashed border-gray-200 rounded-2xl shadow-sm overflow-hidden rounded-2xl p-2">
+                    class="bg-white border border-dashed border-gray-200 rounded-2xl shadow-sm overflow-hidden rounded-2xl p-2 hidden sm:block">
                     <div class="relative">
-                        <img src="./assets/imgs/image1.png" alt="BWallet" class="w-full h-48 object-cover rounded-2xl">
+                        <img src="./assets/imgs/image1.png" alt="BWalet" class="w-full h-48 object-cover rounded-2xl">
                         <div class="absolute top-2 right-2 flex gap-2">
-                            <img src="icon3.png" class="w-6 h-6">
-                            <img src="icon4.png" class="w-6 h-6">
+                            <img src="./assets/imgs/Tools.png" class="w-6 h-6">
+                            <img src="./assets/imgs/Tools-2.png" class="w-6 h-6">
                         </div>
                     </div>
                     <div class="p-4 flex justify-between">
                         <div>
-                            <h3 class="font-semibold text-gray-800">BWallet</h3>
+                            <h3 class="font-semibold text-gray-800">BWalet</h3>
                             <p class="text-sm text-gray-500">Business wallet</p>
                         </div>
                         <div class="flex items-center justify-end mt-2">
                             <div class="flex -space-x-2  sm-block">
-                                <img src="./assets/imgs/person1.png" class="w-6 h-6 rounded-full border-2 border-white">
-                                <img src="./assets/imgs/person2.png" class="w-6 h-6 rounded-full border-2 border-white">
-                                <img src="./assets/imgs/person3.png" class="w-6 h-6 rounded-full border-2 border-white">
+                                <img src="./assets/imgs/person1.png" class="w-6 h-6 rounded-full border-white">
+                                <img src="./assets/imgs/person2.png" class="w-6 h-6 rounded-full border-white">
+                                <img src="./assets/imgs/person3.png" class="w-6 h-6 rounded-full border-white">
+                                <span
+                                    class="ml-2 text-xs rounded-full bg-gray-600 text-white flex items-center justify-center p-2">+99</span>
                             </div>
-                            <span
-                                class="ml-2 text-xs rounded-full bg-gray-600 text-white flex items-center justify-center p-2">+99</span>
                         </div>
                     </div>
                 </div>
 
                 <div
-                    class="bg-white border border-dashed border-gray-200 rounded-2xl shadow-sm overflow-hidde rounded-2xl p-2">
+                    class="bg-white border border-dashed border-gray-200 rounded-2xl shadow-sm overflow-hidde rounded-2xl p-2 hidden xl:block">
                     <div class="relative">
-                        <img src="./assets/imgs/image2.png" alt="Gojek" class="w-full h-48 object-cover rounded-2xl">
+                        <img src="./assets/imgs/image4.png" alt="Gojek" class="w-full h-48 object-cover rounded-2xl">
                         <div class="absolute top-2 right-2 flex gap-2">
-                            <img src="icon5.png" class="w-6 h-6">
-                            <img src="icon6.png" class="w-6 h-6">
+                            <img src="./assets/imgs/Tools-3.png" class="w-6 h-6">
+                            <img src="./assets/imgs/Tools-4.png" class="w-6 h-6">
                         </div>
                     </div>
                     <div class="p-4 flex justify-between">
@@ -250,12 +273,65 @@
                         </div>
                         <div class="flex items-center justify-end mt-2">
                             <div class="flex -space-x-2  sm-block">
-                                <img src="./assets/imgs/person1.png" class="w-6 h-6 rounded-full border-2 border-white">
-                                <img src="./assets/imgs/person2.png" class="w-6 h-6 rounded-full border-2 border-white">
-                                <img src="./assets/imgs/person3.png" class="w-6 h-6 rounded-full border-2 border-white">
+                                <img src="./assets/imgs/person1.png" class="w-6 h-6 rounded-full border-white">
+                                <img src="./assets/imgs/person2.png" class="w-6 h-6 rounded-full border-white">
+                                <img src="./assets/imgs/person3.png" class="w-6 h-6 rounded-full border-white">
+                                <span
+                                    class="ml-2 text-xs rounded-full bg-gray-600 text-white flex items-center justify-center p-2">+99</span>
                             </div>
-                            <span
-                                class="ml-2 text-xs rounded-full bg-gray-600 text-white flex items-center justify-center p-2">+99</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white border border-dashed border-gray-200 rounded-2xl shadow-sm overflow-hidden rounded-2xl p-2 hidden xl:block">
+                    <div class="relative">
+                        <img src="./assets/imgs/image5.png" alt="Bookies" class="w-full h-48 object-cover rounded-2xl">
+                        <div class="absolute top-2 right-2 flex gap-2">
+                            <img src="./assets/imgs/Tools.png" class="w-6 h-6">
+                            <img src="./assets/imgs/Tools-2.png" class="w-6 h-6">
+                        </div>
+                    </div>
+                    <div class="p-4 flex justify-between">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Bookies</h3>
+                            <p class="text-sm text-gray-500">Read digital book app</p>
+                        </div>
+                        <div class="flex items-center justify-end mt-2">
+                            <div class="flex -space-x-2  sm-block">
+                                <img src="./assets/imgs/person1.png" class="w-6 h-6 rounded-full border-white">
+                                <img src="./assets/imgs/person2.png" class="w-6 h-6 rounded-full border-white">
+                                <img src="./assets/imgs/person3.png" class="w-6 h-6 rounded-full border-white">
+                                <span
+                                    class="ml-2 text-xs rounded-full bg-gray-600 text-white flex items-center justify-center p-2">+99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white border border-dashed border-gray-200 rounded-2xl shadow-sm overflow-hidden rounded-2xl p-2">
+                    <div class="relative">
+                        <img src="./assets/imgs/image2.png" alt="Gojek" class="w-full h-48 object-cover rounded-2xl">
+                        <div class="absolute top-2 right-2 flex gap-2">
+                            <img src="./assets/imgs/Tools.png" class="w-6 h-6">
+                            <img src="./assets/imgs/Tools-2.png" class="w-6 h-6">
+                        </div>
+                    </div>
+                    <div class="p-4 flex justify-between">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Gojek</h3>
+                            <p class="text-sm text-gray-500">Home screem gojek apps</p>
+                        </div>
+                        <div class="flex items-center justify-end mt-2">
+                            <div class="flex -space-x-2  sm-block">
+                                <img src="./assets/imgs/person1.png" class="w-6 h-6 rounded-full border-white">
+                                <img src="./assets/imgs/person2.png" class="w-6 h-6 rounded-full border-white">
+                                <img src="./assets/imgs/person3.png" class="w-6 h-6 rounded-full border-white">
+                                <span
+                                    class="ml-2 text-xs rounded-full bg-gray-600 text-white flex items-center justify-center p-2">+99</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -433,10 +509,11 @@
         </div>
     </section>
     <!--footer-start-->
-    <footer class="mt-20 bg-white">
+    <footer class="mt-2 bg-white">
         <div class="mx-auto max-w-screen-md px-4 py-16 text-center">
             <p class="text-xl font-light tracking-tight">
-                So, what are you <br>waiting for?
+                <span class="block md:hidden">So, what are you <br>waiting for?</span>
+                <span class="hidden md:inline">What are you waiting for?</span>
             </p>
 
             <a href="#" class="mt-6 inline-block rounded-full bg-pink-500 px-7 py-3
