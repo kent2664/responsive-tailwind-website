@@ -7,6 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="common.css" rel="stylesheet">
     <title>responsive-website</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
@@ -28,22 +30,19 @@
             <div class="flex items-center gap-6 relative">
                 <a href="#" class="flex items-center gap-2 shrink-0">
                     <img src="assets/imgs/Frame8.png" class="h-6 w-6 rounded-full object-cover" />
-                    <span class="text-base font-semibold leading-none">It’s me</span>
+                    <span class="text-base font-semibold leading-none animate__animated animate__flash">It’s me</span>
                 </a>
 
-                <nav class="hidden md:flex items-center gap-8 text-sm font-light">
-                    <a href="index.html" class="hover:text-pink-500">home</a>
-                    <a href="#about" class="hover:text-pink-500">about</a>
-                    <a href="#contact" class="hover:text-pink-500">contact</a>
-                </nav>
+                <div class="ml-auto flex items-center gap-5">
 
-                 <div class="ml-auto flex items-center gap-5">
-
-                    <label for="nav-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center " aria-label="Open menu">
-                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                            <path d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
+                    <label for="nav-toggle"
+                        class="md:hidden inline-flex h-9 w-9 items-center justify-center z-20 cursor-pointer"
+                        aria-label="Open menu">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                        <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
                     </label>
+
                     <div class="hidden lg:flex items-center gap-4 lg:order-none">
                         <a href="#" aria-label="GitHub"><img src="assets/imgs/github.png" class="h-5 w-5" alt="GitHub" /></a>
                         <a href="#" aria-label="Instagram"><img src="assets/imgs/instagram.png" class="h-5 w-5" alt="Instagram" /></a>
@@ -53,12 +52,39 @@
                     <a href="#"
                         class="absolute left-1/2 rounded-full border border-pink-400 px-5 py-2
                                 text-sm font-light leading-none text-gray-900 hover:bg-pink-50
-                                md:static md:translate-x-0 lg:order-last">
+                                md:static md:translate-x-0 lg:order-last hover:animate-bounce motion-safe:active:animate-bounce ">
                         Download CV
                     </a>
                 </div>
              </div>
         </div>
+        <nav
+        class="hidden peer-checked:flex md:hidden h-[120vh]
+                absolute inset-x-0 top-0 z-50      
+                flex-col bg-white
+                bg-[url('assets/imgs/Group5795.png')] bg-no-repeat bg-left-bottom bg-contain">
+
+            <div class="pt-20 flex justify-center">
+                <a href="index.html" class="flex items-center gap-3">
+                <img src="assets/imgs/Frame8.png" alt="avatar" class="h-10 w-10 rounded-full object-cover" />
+                <span class="text-base font-semibold animate__animated animate__pulse">It’s me</span>
+                </a>
+            </div>
+
+            <ul class="mt-10 px-6 flex flex-col items-center gap-12 text-base font-light">
+                <li class="animate__animated animate__fadeInUp"><a href="index.html" class="hover:text-pink-500">home</a></li>
+                <li class="animate__animated animate__fadeInUp"><a href="#about" class="hover:text-pink-500">about</a></li>
+                <li class="animate__animated animate__fadeInUp"><a href="#contact" class="hover:text-pink-500">contact</a></li>
+            </ul>
+
+            <div class="mt-auto px-6 pb-10 flex justify-center">
+                <a href="#"
+                class="rounded-full bg-pink-500 px-8 py-3 text-white text-base
+                        hover:bg-pink-600">
+                Download CV
+                </a>
+            </div>
+        </nav>
     </header>
     <!--header-end-->
     <section class="p-6 md:p-8">
